@@ -2,13 +2,6 @@
   <div>
     <button @click="login">login</button>
     <button @click="join">join</button>
-    <button @click="sendData">sendData</button>
-    <button @click="changeByTime">changeByTime</button>
-    <!-- <button @click="connect">connect</button> -->
-    <!-- <button @click="join">join</button>
-    <button @click="join">join</button>
-    <button @click="join">join</button>
-    <button @click="join">join</button> -->
    當前時間： {{current}}
   </div>
 </template>
@@ -31,9 +24,6 @@ export default {
     sockets(){
       console.log("sockets",this.sockets)
     }
-  //  $socket:function(){
-  //    console.log("sockets",this.$socket)
-  //  }
   },
   methods:{
     init(){
@@ -62,25 +52,12 @@ export default {
        let joinRequest = {
         userId: token,
         groupId: "666"
-            };
+        };
       this.$socket.emit('join', joinRequest);
-      // this.sockets.io.subscribe("join",(data)=>{
-      //   console.log("11111",data)
-      // })
     },
-    connect(){
-      
-    },
-    sendData(){
-
-    },
-    changeByTime(){
-
-    }
   },
   sockets:{
     join(data){
-      alert("1")
       console.log("join",data)
     },
     test(data){
@@ -93,9 +70,6 @@ export default {
     },
     disconnect(){
       console.log("断开服务器链接")
-    },
-    msg(){
-
     },
     relogin(data){
       console.log("login data",data)

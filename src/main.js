@@ -13,12 +13,12 @@ Vue.use(new VueSocketio({
   debug: true,
   // 服务器端地址
   connection: socketio(url),
-  vuex: {
-    store,
-    actionPrefix: 'SOCKET_',
-    mutationPrefix: 'SOCKET_'
-},
-options: { path: "/my-app/" } //Optional options
+//   vuex: {
+//     store,
+//     actionPrefix: 'SOCKET_',
+//     mutationPrefix: 'SOCKET_'
+// },
+// options: { path: "/my-app/" } //Optional options
   // options: { path: '/my-project/socket.io' }
 }))
 // Vue.use(VueSocketio, socketio('http://localhost:3000'), store);
