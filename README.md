@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-進入server目錄下，運行index.js
+###進入server目錄下，運行index.js
  cd .\server\
  node .\index.js
 
