@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import VueSocketio from 'vue-socket.io';
 import socketio from 'socket.io-client'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 // import '@/plugins/socketIo'
 Vue.config.productionTip = false
 // const token = 'user' + Math.floor((Math.random() * 1000) + 1);

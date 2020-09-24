@@ -17,3 +17,28 @@
 
 //   }
 // }
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/dash',
+//   devServer: {
+//     proxy: {
+//         // '/api': {
+//         //     target: 'http://10.244.186.86:8080/api',
+//         //     changeOrigin: true,
+//         //     ws: true,
+//         //     pathRewrite: {
+//         //       '^/api': ''
+//         //     }
+//         // },
+//         '/dfm': {
+//           target: 'http://10.244.186.111:8080/dfm',
+//           changeOrigin: true,
+//           ws: true,
+//           pathRewrite: {
+//             '^/dfm': ''
+//           }
+//         }
+//     }
+//  },
+  outputDir: '../src/main/webapp',
+  transpileDependencies: [/node_modules[/\\\\](element-ui|vuex|debug|mqtt|router)[/\\\\]/],
+};
